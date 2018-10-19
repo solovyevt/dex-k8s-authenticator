@@ -1,6 +1,7 @@
 # Default values for dex-k8s-authenticator.
 
 # Deploy environment label, e.g. dev, test, prod
+# TODO replace this with labels field
 global:
   deployEnv: dev
 
@@ -19,11 +20,11 @@ dexK8sAuthenticator:
   #tlsCert: /path/to/dex-client.crt
   #tlsKey: /path/to/dex-client.key
   clusters:
-  - name: my-cluster
-    short_description: "My Cluster"
-    description: "Example Cluster Long Description..."
-    client_secret: pUBnBOY80SnXgjibTYM9ZWNzY2xreNGQok
-    issuer: https://dex.example.com
+  - name: bg-office
+    short_description: "Braingarden Office cluster"
+    description: "-"
+    client_secret: pUBnBOY80SnXgjibTYM9ZWNzY2xreNGQoa
+    issuer: https://dex.k8s.in.braingarden.ai
     k8s_master_uri: https://my-cluster.example.com
     client_id: my-cluster
     redirect_uri: https://login.example.com/callback/my-cluster
